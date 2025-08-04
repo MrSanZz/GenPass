@@ -1,6 +1,6 @@
 import random
 
-class GenPass():
+class PassGent():
     def __init__(self, keyword=None, year=None, symbol=None, suffix=None):
         self.wordlist = set()
         self.keywords = keyword or ["admin", "dashboard", "login", "administrator", "manager"]
@@ -8,7 +8,6 @@ class GenPass():
         self.symbols = symbol or ["#", "@", "_", "-", "+", "*", "%"]
         self.suffixes = suffix or ["pass", "123", "admin", "dashboard", "login", "web", "apps"]
 
-    @staticmethod
     def generate_suffix(self):
         base_words = set()
         for word in self.keywords:
@@ -31,7 +30,6 @@ class GenPass():
                                 self.wordlist.add(f"{word1}{suffix}")
         return self.wordlist
 
-    @staticmethod
     def filtering(self, wordlist):
         leet = lambda w: w.replace("o", "0").replace("i", "1").replace("e", "3").replace("a", "4").replace("s", "5")
         leet_words = set()
@@ -40,7 +38,6 @@ class GenPass():
         self.wordlist.update(leet_words)
         return self.wordlist
 
-    @staticmethod
     def generate(self, num: int):
         suffixies = self.generate_suffix()
         wordlist = self.filtering(suffixies)
