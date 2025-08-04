@@ -1,1 +1,1 @@
-from passgent import *
+from .passgent import *
