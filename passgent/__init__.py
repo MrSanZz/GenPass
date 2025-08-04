@@ -1,1 +1,1 @@
-from genpass import *
+from passgent import *
