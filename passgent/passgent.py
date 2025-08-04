@@ -45,3 +45,6 @@ class Generate():
         random.shuffle(final_list)
         sampled_wordlist = final_list[:num]
         return sampled_wordlist
+
+def setup(keyword=None, year=None, symbol=None, suffix=None):
+    return Generate(keyword, year, symbol, suffix)
