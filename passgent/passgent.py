@@ -1,6 +1,6 @@
 import random
 
-class PassGent():
+class Generate():
     def __init__(self, keyword=None, year=None, symbol=None, suffix=None):
         self.wordlist = set()
         self.keywords = keyword or ["admin", "dashboard", "login", "administrator", "manager"]
